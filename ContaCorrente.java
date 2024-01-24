@@ -41,17 +41,17 @@ public class ContaCorrente {
         System.out.println("CPF: " + cpf);
         System.out.println("Saldo: " + saldo);
         System.out.println("Numero da Conta: " + numero_da_conta);
+
     }
 
-    public Double depositar() {
+    public void depositar() {
         System.out.println("Digite o valor a ser depositado: ");
         Scanner valor = new Scanner(System.in);
         double deposito = valor.nextDouble();
-        return saldo += deposito;
-
-
-
+        setSaldo(saldo += deposito);
 
     }
+
+
 
 }

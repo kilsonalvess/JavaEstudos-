@@ -10,22 +10,15 @@ public class Main {
         int x = 0;
         while (true) {
 
-
-
-            System.out.println("*****************************************************************");
-            System.out.println("-----BANCO BRADESCO S.A-----");
-            System.out.println("-----DIGITE A OPCAO DESEJADA-----");
-            System.out.println("-----1- EXIBIR DADOS DA CONTA-----");
-            System.out.println("-----2- DEPOSITO EM CONTA-----");
-            System.out.println("*****************************************************************");
-
-
             ContaCorrente Dados_Da_Conta = new ContaCorrente();
+            Menu Exibir_Menu = new Menu();
 
+            Exibir_Menu.exibirmenu();
             Dados_Da_Conta.nome = "KILSON ALVES DOS SANTOS LEITAO";
             Dados_Da_Conta.cpf = "08417606408";
             Dados_Da_Conta.saldo = 0;
             Dados_Da_Conta.numero_da_conta = 0735.24200;
+
 
 
 
