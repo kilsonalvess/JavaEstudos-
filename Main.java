@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
 
 
-        int x = 0;
         while (true) {
 
             ContaCorrente Dados_Da_Conta = new ContaCorrente();
             Menu Exibir_Menu = new Menu();
+
 
             Exibir_Menu.exibirmenu();
             Dados_Da_Conta.nome = "KILSON ALVES DOS SANTOS LEITAO";
@@ -31,14 +31,9 @@ public class Main {
             }
 
             else if (opcao == 2) {
+
                 Dados_Da_Conta.depositar();
                 Dados_Da_Conta.Exibir_Dados();
-
-
-
-
-
-
             }
 
 

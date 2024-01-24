@@ -8,6 +8,7 @@ public class ContaCorrente {
 
     double numero_da_conta;
 
+
     public double getNumero_da_conta() {
         return numero_da_conta;
     }
@@ -48,9 +49,18 @@ public class ContaCorrente {
         System.out.println("Digite o valor a ser depositado: ");
         Scanner valor = new Scanner(System.in);
         double deposito = valor.nextDouble();
-        setSaldo(saldo += deposito);
+        this.setSaldo(deposito);
+
+
+
 
     }
+
+    public void atualizar_saldo () {
+
+
+    }
+
 
 
 
