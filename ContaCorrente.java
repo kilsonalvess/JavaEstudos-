@@ -4,9 +4,9 @@ public class ContaCorrente {
 
     private  String nome;
     private  String cpf;
-    private double saldo;
+    private double saldo = 0 ;
     private double numero_da_conta;
-    public double y;
+
 
 
     public ContaCorrente (){
@@ -14,8 +14,10 @@ public class ContaCorrente {
         this.cpf = cpf;
         this.saldo = saldo;
         this.numero_da_conta = numero_da_conta;
-        this.y = y;
+
     }
+
+
 
     public void setNumero_da_conta(double numero_da_conta) {
         this.numero_da_conta = numero_da_conta;
@@ -44,17 +46,13 @@ public class ContaCorrente {
     }
 
     public double getSaldo() {
-        return saldo + y ;
-    }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+        return saldo;
     }
 
     public void Exibir_Dados() {
         System.out.println("Nome: " + nome);
         System.out.println("CPF: " + cpf);
-        System.out.println("Saldo: " + getSaldo());
+        System.out.println("Saldo: " + saldo);
         System.out.println("Numero da Conta: " + numero_da_conta);
     }
 
@@ -63,13 +61,9 @@ public class ContaCorrente {
         Scanner valor = new Scanner(System.in);
         double deposito = valor.nextDouble();
         saldo =+ deposito;
-        
-
-
 
     }
-
-    public void transferencia () {
+        public void transferencia () {
         System.out.println("Valor a ser transferido: ");
         Scanner entrada_valor = new Scanner(System.in);
         double x = entrada_valor.nextDouble();
