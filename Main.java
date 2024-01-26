@@ -3,18 +3,23 @@ import org.w3c.dom.ls.LSOutput;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends ContaCorrente {
     public static void main(String[] args) {
 
 
-        for (int i = 0; i < 50; i++) {
-            ContaCorrente Dados_Da_Conta = new ContaCorrente();
+        while (true) {
+
             Menu Exibir_Menu = new Menu();
 
             Exibir_Menu.exibirmenu();
-            Dados_Da_Conta.nome = "KILSON ALVES DOS SANTOS LEITAO";
-            Dados_Da_Conta.cpf = "08417606408";
-            Dados_Da_Conta.numero_da_conta = 0735.24200;
+
+            ContaCorrente Dados_Da_Conta = new ContaCorrente();
+
+            //* Exemplos de injeção de dependência
+            Dados_Da_Conta.setNome("KILSON ALVES DOS SANTOS LEITAO");
+            Dados_Da_Conta.setCpf("08417606408");
+            Dados_Da_Conta.getSaldo();
+            Dados_Da_Conta.setNumero_da_conta(0735.24200);
 
 
             Scanner leitura = new Scanner (System.in);

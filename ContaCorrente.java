@@ -2,20 +2,34 @@ import java.util.Scanner;
 
 public class ContaCorrente {
 
-    String nome;
-    String cpf;
-    double saldo;
+    private  String nome;
+    private  String cpf;
+    private double saldo;
+    private double numero_da_conta;
+    public double y;
 
-    double numero_da_conta;
 
+    public ContaCorrente (){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.saldo = saldo;
+        this.numero_da_conta = numero_da_conta;
+        this.y = y;
+    }
+
+    public void setNumero_da_conta(double numero_da_conta) {
+        this.numero_da_conta = numero_da_conta;
+    }
 
     public double getNumero_da_conta() {
         return numero_da_conta;
     }
 
+
     public String getNome() {
         return nome;
     }
+
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -30,7 +44,7 @@ public class ContaCorrente {
     }
 
     public double getSaldo() {
-        return saldo;
+        return saldo + y ;
     }
 
     public void setSaldo(double saldo) {
@@ -40,7 +54,7 @@ public class ContaCorrente {
     public void Exibir_Dados() {
         System.out.println("Nome: " + nome);
         System.out.println("CPF: " + cpf);
-        System.out.println("Saldo: " + saldo);
+        System.out.println("Saldo: " + getSaldo());
         System.out.println("Numero da Conta: " + numero_da_conta);
     }
 
@@ -49,6 +63,10 @@ public class ContaCorrente {
         Scanner valor = new Scanner(System.in);
         double deposito = valor.nextDouble();
         saldo =+ deposito;
+        
+
+
+
     }
 
     public void transferencia () {
@@ -56,6 +74,8 @@ public class ContaCorrente {
         Scanner entrada_valor = new Scanner(System.in);
         double x = entrada_valor.nextDouble();
         saldo =- x;
+
+
     }
 
     public String toString(){
